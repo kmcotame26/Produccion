@@ -1,0 +1,17 @@
+name: Pipelinne CONIITI
+
+on:
+    pussh:
+        branches: [main]
+
+jobs:
+    construir-y-probar:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: 1. Clonar el codigo
+              uses: actions/checkout@v4
+            - name: 2. Instalar dependencias
+            run: npm install
+            - name: 3. Hacer el build
+            run: rpm run build
